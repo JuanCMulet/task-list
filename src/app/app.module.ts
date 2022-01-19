@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { ClockComponent } from './components/clock/clock.component';
 import { ButtonComponent } from './components/button/button.component';
+import { TaskItemComponent } from './components/task-item/task-item.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ButtonComponent } from './components/button/button.component';
     FooterComponent,
     TasksComponent,
     ClockComponent,
-    ButtonComponent
+    ButtonComponent,
+    TaskItemComponent
   ],
   imports: [
     BrowserModule,
