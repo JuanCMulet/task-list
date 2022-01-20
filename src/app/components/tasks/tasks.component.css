@@ -14,4 +14,9 @@
 
 #task-list {
     margin-top: 1em;
+    max-height: 25em;
+}
+
+.task-container {
+    overflow: auto;
 }

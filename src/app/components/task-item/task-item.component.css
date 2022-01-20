@@ -7,7 +7,13 @@ h3 {
     max-width: 70%;
 }
 
-svg:hover {
+i {
+    padding-top: 5px;
+    height: 16px;
+    width: 16px;
+}
+
+i:hover {
     cursor: pointer;
     color: red;
 }

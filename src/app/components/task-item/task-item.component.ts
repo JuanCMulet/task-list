@@ -1,6 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Task } from '../Task';
-import { TASKS } from '../mock-task';
+import { Task } from '../../Task';
+import { TASKS } from '../../mock-task';
 
 
 @Component({
@@ -14,6 +14,10 @@ export class TaskItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onDelete() {
+    console.log(this.task)
   }
 
 }

@@ -14,13 +14,13 @@
         </div>
     </div>
     <div id="task-list" class="container d-flex justify-content-around">
-        <div>
+        <div class="task-container">
             <app-task-item
                 *ngFor="let task of tasks"
                 [task]= "task"
             ></app-task-item>
         </div>
-        <div id="searched-items">
+        <div id="searched-items" class="task-container">
             <app-task-item
                 *ngFor="let task of tasks"
                 [task]= "task"
