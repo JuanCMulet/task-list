@@ -19,6 +19,7 @@
                 *ngFor="let task of tasks"
                 [task]= "task"
                 (onDeleteTask)="deleteTask(task)"
+                (onToggleReminder)="toggleReminder(task)"
             ></app-task-item>
         </div>
         <div id="searched-items" class="task-container">

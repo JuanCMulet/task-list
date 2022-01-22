@@ -1,8 +1,30 @@
-<div id="card" class="container bg-light">
-    <div class="d-flex justify-content-between">
+<div 
+    id="card" 
+    class="container bg-light"
+    [ngClass]="{ reminder: task.reminder }"
+    >
+    <div 
+        class="d-flex justify-content-between"
+    >
         <h3>{{ task.text }}</h3>
-        <i class="bi bi-x-circle"
-           (click)="onDelete(task)"></i>
+        <i
+            class="bi bi-x"
+            (click)="onDelete(task)"
+        ></i>
     </div>
-    <p>{{ task.day }}</p>
+    <div
+        class="d-flex justify-content-between"
+    >
+        <p>{{ task.day }}</p>
+        <i
+            *ngIf="!task.reminder"
+            class="bi bi-app"
+            (click)="onToggle(task)"
+        ></i>
+        <i
+            *ngIf="task.reminder"
+            class="bi bi-check-square"
+            (click)="onToggle(task)"
+        ></i>
+    </div>
 </div>

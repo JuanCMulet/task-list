@@ -1,6 +1,6 @@
-#card:hover {
-    border-radius: 10px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+.reminder {
+    border-left: 3px solid green;
 }
 
 h3 {
@@ -11,9 +11,19 @@ i {
     padding-top: 5px;
     height: 16px;
     width: 16px;
+    cursor: pointer;
 }
 
-i:hover {
-    cursor: pointer;
+.bi-x {
     color: red;
+    font-size: 1.5rem;
 }
+
+.bi-app:hover {
+    color: green;
+}
+
+.bi-check-square {
+    color: green;
+}
+
