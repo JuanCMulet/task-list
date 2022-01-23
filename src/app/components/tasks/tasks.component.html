@@ -1,4 +1,5 @@
 <div class="container" id="task-container">
+
     <div class="d-flex flex-row justify-content-between align-items-center">
         <app-clock></app-clock>
         <div class="d-flex justify-content-end" id="task-bar">
@@ -8,11 +9,22 @@
             </form>
             <div class="d-flex">
                 <app-button
+                    [ngClass]="showAddTask? 'btn-danger' : 'btn-success'"
+                    text="{{showAddTask? 'Close Task' : 'Add Task'}}"
                     (btnClick)="toggleAddTask()"
-                    ></app-button>
+                >
+                </app-button>
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <app-add-task
+            (onAddTask)="addTask($event)"
+        >
+        </app-add-task>
+    </div>
+
     <div id="task-list" class="container d-flex justify-content-around">
         <div class="task-container">
             <app-task-item
@@ -22,11 +34,11 @@
                 (onToggleReminder)="toggleReminder(task)"
             ></app-task-item>
         </div>
-        <div id="searched-items" class="task-container">
+        <!--<div id="searched-items" class="task-container">
             <app-task-item
                 *ngFor="let task of tasks"
                 [task]= "task"
             ></app-task-item>
-        </div>
+        </div> -->
     </div>
 </div>
