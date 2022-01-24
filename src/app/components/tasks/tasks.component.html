@@ -25,7 +25,11 @@
         </app-add-task>
     </div>
 
-    <div id="task-list" class="container d-flex justify-content-around">
+    <div 
+        id="task-list" 
+        class="container d-flex justify-content-around"
+        *ngIf="!showAddTask"
+        >
         <div class="task-container">
             <app-task-item
                 *ngFor="let task of tasks"
